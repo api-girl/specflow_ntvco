@@ -26,26 +26,20 @@ namespace Steps
             //promotions.OpenBoxPromotion();
         }
 
-        [When(@"I select ""(.*)"" Promotion")]
+        [When(@"I select Promotion ""(.*)""")]
         public void WhenISelectPromotion(string p0)
         {
-            //_promotions.FindElement(driver, locator).Click();
+            ScenarioContext.Current.Pending();
         }
 
-        [Then(@"in Cart I see ""(.*)""\.")]
-        public void ThenInCartISee_(string p0)
+        [Then(@"I see the following cart items")]
+        public void ThenISeeTheFollowingCartItems(Table table)
         {
-            
+
         }
 
         [When(@"I select Subscription ""(.*)""")]
         public void WhenISelectSubscription(string p0)
-        {
-            
-        }
-
-        [Then(@"in Cart I see ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)""\.")]
-        public void ThenInCartISee_(string p0, string p1, string p2, string p3, string p4, string p5, string p6, string p7, string p8)
         {
             
         }
@@ -56,11 +50,8 @@ namespace Steps
             
         }
 
-        [Then(@"in Cart I see ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)"", ""(.*)""")]
-        public void ThenInCartISee(string p0, string p1, string p2, string p3, string p4)
-        {
-            
-        }
 
-    }
+
+
+         }
 }
