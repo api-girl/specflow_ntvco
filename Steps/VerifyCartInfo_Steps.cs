@@ -1,10 +1,12 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using Pages;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 
 namespace Steps
@@ -20,16 +22,18 @@ namespace Steps
             _promotions = promotions;
         }
 
+        IWebDriver driver = new ChromeDriver();
+
         [Given(@"that I select Box option")]
         public void GivenThatISelectBoxOption()
         {
-            //promotions.OpenBoxPromotion();
+            
         }
 
         [When(@"I select Promotion ""(.*)""")]
         public void WhenISelectPromotion(string p0)
         {
-            ScenarioContext.Current.Pending();
+            
         }
 
         [Then(@"I see the following cart items")]

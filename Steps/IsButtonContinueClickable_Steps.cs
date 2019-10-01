@@ -11,19 +11,19 @@ namespace VSC.Steps
         [Given(@"that I selected Box option")]
         public void GivenThatISelectedBoxOption()
         {
-            ScenarioContext.Current.Pending();
+            
         }
 
         [Then(@"button Continue is inactive\.")]
         public void ThenButtonContinueIsInactive_()
         {
-            ScenarioContext.Current.Pending();
+           
         }
 
         [Then(@"button Continue is active")]
         public void ThenButtonContinueIsActive()
         {
-            ScenarioContext.Current.Pending();
+            
         }
 
     }

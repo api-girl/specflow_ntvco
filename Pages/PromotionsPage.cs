@@ -15,14 +15,14 @@ namespace Pages
         private IWebElement WaitForElementClickability(IWebDriver driver, By locator)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
-            IWebElement element = wait.Until(condition: ExpectedConditions.ElementToBeClickable(locator));
+            IWebElement element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(locator));
             return element;
         }
 
         private IWebElement WaitForElementVisibility(IWebDriver driver, By locator)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
-            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(locator));
+            IWebElement element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
             return element;
         }
 
